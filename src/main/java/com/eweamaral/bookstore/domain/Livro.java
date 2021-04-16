@@ -9,11 +9,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-@Entity
-public class Livro implements Serializable{
+@Entity(name = "Livro")
+public class Livro implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -91,7 +91,7 @@ public class Livro implements Serializable{
 		if (this == obj)
 			return true;
 		if (obj == null)
-			return false;
+			return false;     
 		if (getClass() != obj.getClass())
 			return false;
 		Livro other = (Livro) obj;
